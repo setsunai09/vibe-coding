@@ -3,78 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой сайт</title>
+  <title>Конструктор Суперкрошек</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Шапка -->
-  <header class="header">
-    <div class="container">
-      <a href="/" class="logo">Logo</a>
-      <nav class="nav">
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-    </div>
-  </header>
+  <div class="app">
 
-  <!-- Главный экран -->
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Добро пожаловать</h1>
-        <p>Краткое описание вашего проекта или услуги</p>
-        <button class="btn btn-primary">Начать</button>
-      </div>
-    </section>
+    <!-- Левая панель -->
+    <aside class="sidebar">
+      <h1 class="sidebar-title">🌸 Конструктор</h1>
 
-    <!-- О нас -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>О нас</h2>
-        <p>Информация о компании или проекте.</p>
-      </div>
-    </section>
+      <div class="options">
 
-    <!-- Услуги -->
-    <section id="services" class="section section-alt">
-      <div class="container">
-        <h2>Услуги</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Услуга 1</h3>
-            <p>Описание первой услуги.</p>
-          </div>
-          <div class="card">
-            <h3>Услуга 2</h3>
-            <p>Описание второй услуги.</p>
-          </div>
-          <div class="card">
-            <h3>Услуга 3</h3>
-            <p>Описание третьей услуги.</p>
+        <div class="option-group">
+          <label class="option-label">Цвет платья</label>
+          <div class="color-swatches">
+            <button class="swatch swatch-green" data-option="dress" data-value="green" title="Зелёное"></button>
+            <button class="swatch swatch-pink" data-option="dress" data-value="pink" title="Розовое"></button>
+            <button class="swatch swatch-blue" data-option="dress" data-value="blue" title="Синее"></button>
+            <button class="swatch swatch-purple" data-option="dress" data-value="purple" title="Фиолетовое"></button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Контакты -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Контакты</h2>
-        <p>Email: example@mail.ru</p>
-        <p>Телефон: +7 (999) 123-45-67</p>
-      </div>
-    </section>
-  </main>
+        <div class="option-group">
+          <label class="option-label">Цвет волос</label>
+          <div class="color-swatches">
+            <button class="swatch swatch-black" data-option="hair" data-value="black" title="Чёрные"></button>
+            <button class="swatch swatch-brown" data-option="hair" data-value="brown" title="Коричневые"></button>
+            <button class="swatch swatch-blonde" data-option="hair" data-value="blonde" title="Рыжие"></button>
+            <button class="swatch swatch-red" data-option="hair" data-value="red" title="Рыжие"></button>
+          </div>
+        </div>
 
-  <!-- Подвал -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Мой сайт. Все права защищены.</p>
-    </div>
-  </footer>
+        <div class="option-group">
+          <label class="option-label">Цвет глаз</label>
+          <div class="color-swatches">
+            <button class="swatch swatch-green" data-option="eyes" data-value="green" title="Зелёные"></button>
+            <button class="swatch swatch-blue" data-option="eyes" data-value="blue" title="Синие"></button>
+            <button class="swatch swatch-brown" data-option="eyes" data-value="brown" title="Карие"></button>
+            <button class="swatch swatch-violet" data-option="eyes" data-value="violet" title="Фиолетовые"></button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <label class="option-label">Причёска</label>
+          <div class="style-buttons">
+            <button class="style-btn" data-option="hairStyle" data-value="buns" title="Бантики">Бантики</button>
+            <button class="style-btn" data-option="hairStyle" data-value="pigtails" title="Хвостики">Хвостики</button>
+            <button class="style-btn" data-option="hairStyle" data-value="short" title="Каре">Каре</button>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Центральная зона персонажа -->
+    <main class="stage">
+      <div class="character-container">
+        <svg class="character" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- Ноги -->
+          <g class="legs">
+            <rect x="168" y="390" width="18" height="70" rx="9" fill="#FFD6C8"/>
+            <rect x="214" y="390" width="18" height="70" rx="9" fill="#FFD6C8"/>
+            <!-- Туфли -->
+            <ellipse cx="177" cy="462" rx="22" ry="12" fill="#FF6B9D"/>
+            <ellipse cx="223" cy="462" rx="22" ry="12" fill="#FF6B9D"/>
+          </g>
+
+          <!-- Платье -->
+          <g class="dress" data-color="green">
+            <path d="M140,240 Q130,310 145,380 L255,380 Q270,310 260,240 Z" fill="#4CAF50"/>
+            <!-- Юбка волнистая -->
+            <path d="M145,370 Q160,390 200,385 Q240,390 255,370" fill="none" stroke="#388E3C" stroke-width="3"/>
+            <!-- Пояс -->
+            <rect x="142" y="238" width="116" height="14" rx="4" fill="#388E3C"/>
+          </g>
+
+          <!-- Руки -->
+          <g class="arms">
+            <path d="M140,250 Q110,280 105,320" fill="none" stroke="#FFD6C8" stroke-width="16" stroke-linecap="round"/>
+            <path d="M260,250 Q290,280 295,320" fill="none" stroke="#FFD6C8" stroke-width="16" stroke-linecap="round"/>
+            <!-- Кисти -->
+            <circle cx="105" cy="322" r="10" fill="#FFD6C8"/>
+            <circle cx="295" cy="322" r="10" fill="#FFD6C8"/>
+          </g>
+
+          <!-- Шея -->
+          <rect x="185" y="210" width="30" height="35" rx="8" fill="#FFD6C8"/>
+
+          <!-- Голова -->
+          <g class="head">
+            <ellipse cx="200" cy="140" rx="95" ry="100" fill="#FFD6C8"/>
+          </g>
+
+          <!-- Волосы (задняя часть / причёска) -->
+          <g class="hair-back" data-style="buns">
+            <!-- Бантики -->
+            <circle cx="115" cy="55" r="30" fill="#2D2D2D"/>
+            <circle cx="285" cy="55" r="30" fill="#2D2D2D"/>
+            <!-- Бантики-банты -->
+            <path d="M115,40 L95,20 L110,35 L130,20 L115,40" fill="#FF6B9D"/>
+            <path d="M285,40 L270,20 L290,35 L305,20 L285,40" fill="#FF6B9D"/>
+          </g>
+
+          <g class="hair-back pigtails" data-style="pigtails" style="display:none">
+            <path d="M115,100 Q80,80 70,130 Q65,160 80,170" fill="none" stroke="#2D2D2D" stroke-width="24" stroke-linecap="round"/>
+            <path d="M285,100 Q320,80 330,130 Q335,160 320,170" fill="none" stroke="#2D2D2D" stroke-width="24" stroke-linecap="round"/>
+            <circle cx="75" cy="175" r="14" fill="#FF6B9D"/>
+            <circle cx="325" cy="175" r="14" fill="#FF6B9D"/>
+          </g>
+
+          <g class="hair-back short" data-style="short" style="display:none">
+            <path d="M105,120 Q105,40 200,35 Q295,40 295,120" fill="none" stroke="#2D2D2D" stroke-width="28" stroke-linecap="round"/>
+          </g>
+
+          <!-- Лицо -->
+          <g class="face">
+            <!-- Брови -->
+            <path d="M145,105 Q155,95 170,100" fill="none" stroke="#5D4037" stroke-width="3" stroke-linecap="round"/>
+            <path d="M230,100 Q245,95 255,105" fill="none" stroke="#5D4037" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Глаза (огромные!) -->
+            <g class="eyes" data-color="green">
+              <!-- Левый глаз -->
+              <ellipse cx="158" cy="130" rx="32" ry="38" fill="#FFFFFF" stroke="#333" stroke-width="2"/>
+              <circle cx="160" cy="132" r="18" fill="#4CAF50"/>
+              <circle cx="162" cy="128" r="10" fill="#2D2D2D"/>
+              <circle cx="166" cy="122" r="5" fill="#FFFFFF"/>
+              <circle cx="155" cy="135" r="2.5" fill="#FFFFFF"/>
+
+              <!-- Правый глаз -->
+              <ellipse cx="242" cy="130" rx="32" ry="38" fill="#FFFFFF" stroke="#333" stroke-width="2"/>
+              <circle cx="240" cy="132" r="18" fill="#4CAF50"/>
+              <circle cx="242" cy="128" r="10" fill="#2D2D2D"/>
+              <circle cx="246" cy="122" r="5" fill="#FFFFFF"/>
+              <circle cx="235" cy="135" r="2.5" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Рот -->
+            <path d="M188,175 Q200,190 212,175" fill="none" stroke="#E57373" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Румянец -->
+            <ellipse cx="135" cy="160" rx="16" ry="10" fill="#FFB6C1" opacity="0.5"/>
+            <ellipse cx="265" cy="160" rx="16" ry="10" fill="#FFB6C1" opacity="0.5"/>
+          </g>
+
+          <!-- Волосы (передняя часть / чёлка) -->
+          <g class="hair-front" data-color="#2D2D2D">
+            <path d="M110,110 Q115,50 200,45 Q285,50 290,110 Q270,75 200,72 Q130,75 110,110 Z" fill="#2D2D2D"/>
+          </g>
+
+        </svg>
+      </div>
+
+      <p class="stage-hint">Выбери настройки слева, чтобы изменить персонажа!</p>
+    </main>
+
+  </div>
 
   <script src="js/main.js"></script>
 </body>
